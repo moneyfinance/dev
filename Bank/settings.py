@@ -35,7 +35,7 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = [".bajajfinance.ltd", "bajajfinance.ltd", ".vercel.app"]
 AUTH_USER_MODES = 'User.User'
 
 api_key = "bbc87eb4-40b2-11ee-addf-0200cd936042"
