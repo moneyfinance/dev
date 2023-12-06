@@ -28,4 +28,3 @@ urlpatterns = [
     path('user/<int:id>/',user.user_page),
     path('user_info/',user.user_info),
 ]
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
