@@ -6,4 +6,4 @@ sqlparse==0.4.3
 tzdata==2022.7
 requests==2.31.0
 djangorestframework==3.14.0
-whitenoise==6.3.0
+whitenoise==5.0.0
