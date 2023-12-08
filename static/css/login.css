@@ -16,9 +16,6 @@ body {
 	align-items: center;
 	flex-direction: column;
 	gap: 30px;
-	/* background-color: rgb(231, 231, 231); */
-    /* background-image: url('{% static "images/R.jpg" %}');
-    background-size: cover; */
 }
 
 header {
