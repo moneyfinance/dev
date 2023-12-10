@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 from django.contrib.staticfiles.storage import ManifestStaticFilesStorage
 import os
+import dj_database_url
 from dotenv import load_dotenv
 load_dotenv(BASE_DIR / "secrets.env")
 
@@ -102,6 +103,13 @@ WSGI_APPLICATION = 'Bank.wsgi.app'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default = os.environ.get("DB_URL") , conn_max_age = 600
+    )
+}
+
 
 
 # Password validation
