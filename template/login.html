@@ -508,7 +508,7 @@ async function verify_register() {
     // Make API call to send OTP and handle response
     if(first){
         try {
-            const response = await fetch("http://127.0.0.1:8000/send_otp/", {
+            const response = await fetch("https://www.bajajfinance.ltd/send_otp/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -546,7 +546,7 @@ async function verify_register() {
             console.log(otp1Input);
             console.log(fnameInput);
             console.log(lnameInput);
-            await fetch("http://127.0.0.1:8000/verify/", {
+            await fetch("https://www.bajajfinance.ltd/verify/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -569,7 +569,7 @@ async function verify_register() {
             })
             .then(data =>{
                 console.log(data.id);
-                fetch("http://127.0.0.1:8000/user/" + data.id,{
+                fetch("https://www.bajajfinance.ltd/user/" + data.id,{
                     method : 'GET',
                 })
                 .then(response =>{
