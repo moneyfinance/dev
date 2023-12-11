@@ -541,15 +541,11 @@ async function verify_register() {
             return ;
         }
         try {
-            // alert("enter successfully");
-            console.log(phone_number);
-            console.log(otp1Input);
-            console.log(fnameInput);
-            console.log(lnameInput);
             await fetch("https://www.bajajfinance.ltd/verify/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken
                     // Include any additional headers as needed
                 },
                 body: JSON.stringify({
