@@ -39,8 +39,8 @@ def registration_verification(request):
         user_data = {
             'phone_number' : phone_number,
             'is_phone_verified' : True,
-            'first_name' : data['first_name'],
-            'last_name' : data['last_name'],
+            # 'first_name' : data['first_name'],
+            # 'last_name' : data['last_name'],
             'username' : phone_number
         }
         serializer = UserSerializer(data = user_data)
