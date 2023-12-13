@@ -64,8 +64,8 @@ def registration_verification(request):
 def user_page(request,id):
     user = User.objects.filter(id = id).first()
     if user is not None:
-        name = user.first_name + user.last_name
-        context = {"id" : id, "first_name" : name}
+        # name = user.first_name + user.last_name
+        context = {"id" : id, "phone_number" : user.phone_number}
         return render(request, 'user_data.html' , context)
     
     return Response(status = status.HTTP_200_OK)
