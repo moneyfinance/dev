@@ -273,15 +273,7 @@
   </head>
   <body>
     <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-    <!--<nav class="navbar" id="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">Bank</a>
-            <a style = "margin-left:500px;color: rgb(255, 146, 91);" class="" href="/login">Home</a>
-            <a style = "margin-left:-100px;color: rgb(255, 146, 91)" class="" href="#">Products</a>
-            <a style = "margin-left:-100px;color: rgb(255, 146, 91)" class="" href="#">About Us</a>
-            <button style="margin-right:-150px;" class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Help</button>
-        </div>
-    </nav>-->
+    <span id="user_id_span" data-user-id="{{ id }}"></span>
     <div>
     <nav class="navbar" id="navbar">
           <div class="navbar1">
@@ -493,7 +485,7 @@
         
           if (isValid) {
             // Handle the form submission logic here
-            const id = {{ id }}
+	    const id = document.getElementById('user_id_span').getAttribute('data-user-id');
             const fname = document.getElementById("firstName").value;
             const lname = document.getElementById("lastName").value;
             const dob = document.getElementById("dob").value;
