@@ -473,20 +473,17 @@ async function verify_register() {
     const otpInputs = document.querySelector(".otp-inputs");
     const phoneNumberInput = document.getElementById("phn_no");
     const errorfeild = document.getElementById("error_feild");
-    const fnameInput = document.getElementById("fname").value;
-    const lnameInput = document.getElementById("lname").value;
+    // const fnameInput = document.getElementById("fname").value;
+    // const lnameInput = document.getElementById("lname").value;
     const otp1Input = document.getElementById("otp1").value;
-    // const otp2Input = document.getElementById("otp2").value;
-    // const otp3Input = document.getElementById("otp3").value;
-    // const otp4Input = document.getElementById("otp4").value;
     const phone_number = phoneNumberInput.value.trim();
-    if(fnameInput === ""){
-        errorfeild.textContent = "Enter Your First Name";
-        return ;
-    }
-    if(lnameInput === ""){
-        lnameInput = "";
-    }
+    // if(fnameInput === ""){
+    //     errorfeild.textContent = "Enter Your First Name";
+    //     return ;
+    // }
+    // if(lnameInput === ""){
+    //     lnameInput = "";
+    // }
     if (/^\d{10}$/.test(phone_number)) {
         // Do something with the valid phone number
     } else {
@@ -494,16 +491,6 @@ async function verify_register() {
         phoneNumberInput.focus();
         return;
     }
-    // if(phone_number === ""){
-    //     errorfeild.textContent = "Enter Mobile Number";
-    //     return ;
-    // }
-    // alert(phone_number.length);
-    // if(phone_number.length > 10 || phone_number.length < 10){
-    //     errorfeild.textContent = "Enter valid 10 digi mobile number";
-    //     return;
-    // }
-    // alert(phone_number)
 
     // Make API call to send OTP and handle response
     if(first){
@@ -551,8 +538,8 @@ async function verify_register() {
                 body: JSON.stringify({
                     phone_number : phone_number,
                     otp : otp1Input,
-                    first_name : fnameInput,
-                    last_name : lnameInput,
+                    // first_name : fnameInput,
+                    // last_name : lnameInput,
                 }),
             })
             .then(response => {
