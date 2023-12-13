@@ -33,17 +33,17 @@
             display: block;
             margin-bottom: 0.5rem;
           }
-	  .navbar {
+	  .navbar1 {
 	  display: flex;
 	  justify-content: space-between;
 	  align-items: center;
 	}
 	
-	.navbar-left {
+	.navbar1-left {
 	  flex-grow: 1; /* Allow the navbar-brand to take the available space */
 	}
 	
-	.navbar-right {
+	.navbar1-right {
 	  display: flex;
 	  align-items: center;
 	}
@@ -282,13 +282,13 @@
     </nav>-->
     <div>
     <nav class="navbar" id="navbar">
-          <div class="navbar">
-              <div class="navbar-left">
+          <div class="navbar1">
+              <div class="navbar1-left">
                   <a class="navbar-brand" href="#">
                       <img class="logo" src="{% static 'images/logo.webp' %}" alt="Bank Logo">
                   </a>
               </div>
-              <div class="navbar-right">
+              <div class="navbar1-right">
                   <span id="user_id" class="user_name">{{ first_name }}</span>
               </div>
           </div>
