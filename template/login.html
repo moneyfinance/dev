@@ -473,10 +473,9 @@ async function verify_register() {
     const otpInputs = document.querySelector(".otp-inputs");
     const phoneNumberInput = document.getElementById("phn_no");
     const errorfeild = document.getElementById("error_feild");
-    // const fnameInput = document.getElementById("fname").value;
-    // const lnameInput = document.getElementById("lname").value;
     const otp1Input = document.getElementById("otp1").value;
     const phone_number = phoneNumberInput.value.trim();
+	console.log("done");
     // if(fnameInput === ""){
     //     errorfeild.textContent = "Enter Your First Name";
     //     return ;
@@ -491,6 +490,7 @@ async function verify_register() {
         phoneNumberInput.focus();
         return;
     }
+	console.log("first done");
 
     // Make API call to send OTP and handle response
     if(first){
