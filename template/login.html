@@ -77,7 +77,7 @@ header {
 }
 
 .container {
-	height: 600px;
+	height: 500px;
 	width: 500px;
 	/* background-color: white; */
 	box-shadow: 8px 8px 20px rgb(128, 128, 128);
@@ -390,34 +390,11 @@ header {
     
     <!-- container div -->
     <div class="container">
-        <!-- upper button section to select
-             the login or signup form -->
-        <!--<div class="slider"></div>-->
         <div class="btn">
-            <!--<button class="login">Login</button>-->
             <button class="signup">Signup</button>
         </div>
  
-        <!-- Form section that contains the
-             login and the signup form -->
         <div class="form-section">
- 
-            <!-- login form -->
-            <!--<div class="login-box">
-                <div>
-                    <span class ="lbl" >*</span>
-                    <input type="tel"
-                        class="email ele"
-                        placeholder="Enter 10 digit mobile number">
-                </div>
-                <div>
-                    <span class ="lbl" >*</span>
-                    <input type="password"
-                        class="password ele"
-                        placeholder="password">
-                </div>
-                <button class="clkbtn">Login</button>
-            </div>-->
  
             <!-- signup form -->
             <div class="signup-box">
@@ -461,10 +438,6 @@ let slider = document.querySelector(".slider");
 let formSection = document.querySelector(".form-section");
 var first = true;
 const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-// let sendOtpButton = document.querySelector(".clkbtn");
-// const upbtn = document.querySelector("#upbtn");
-// upbtn.addEventListener("click", verify_register);
-// let otpInputs = document.querySelectorAll(".otp-inputs");
 
 
 async function verify_register() {
@@ -475,14 +448,7 @@ async function verify_register() {
     const errorfeild = document.getElementById("error_feild");
     const otp1Input = document.getElementById("otp1").value;
     const phone_number = phoneNumberInput.value.trim();
-	console.log("done");
-    // if(fnameInput === ""){
-    //     errorfeild.textContent = "Enter Your First Name";
-    //     return ;
-    // }
-    // if(lnameInput === ""){
-    //     lnameInput = "";
-    // }
+
     if (/^\d{10}$/.test(phone_number)) {
         // Do something with the valid phone number
     } else {
@@ -490,7 +456,6 @@ async function verify_register() {
         phoneNumberInput.focus();
         return;
     }
-	console.log("first done");
 
     // Make API call to send OTP and handle response
     if(first){
