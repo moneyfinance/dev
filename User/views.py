@@ -62,8 +62,13 @@ def registration_verification(request):
 
 @api_view(['GET'])
 def user_page(request,id):
-    context = {"id" : id}
-    return render(request,'user_data.html',context)
+    user = User.objects.filter(id = id).first()
+    if user is not None:
+        name = user.first_name + user.last_name
+        context = {"id" : id, "first_name" : name}
+        return render(request, 'user_data.html' , context)
+    
+    return Response(status = status.HTTP_200_OK)
 
 
 @api_view(['POST'])
